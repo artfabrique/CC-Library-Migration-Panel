@@ -1,0 +1,40 @@
+/*Your styles*/
+
+ body {
+    margin: 10px;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+#content {
+    margin-right:auto;
+    margin-left:auto;
+    vertical-align:middle;
+    width:100%;
+}
+
+.w100{
+    width: 100%;
+}
+
+.preview-image {
+    background-image: url("../img/grid-dark.png");
+    background-repeat: repeat;
+    margin: 10px 0;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 1px;
+    border: solid 1px #222222;
+}
+
+.preview-image img{
+    width: 100%;
+    height: auto;
+
+}
+
+

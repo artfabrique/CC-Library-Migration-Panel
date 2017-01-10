@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+     Copyright 2016 Alexander Vinogradov
+     All rights reserved.
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>me.Revenga.CCLibraryMigration</title>
+    <!-- Will contain Topcoat original CSS href -->
+    <link id="topcoat" rel="stylesheet" href="css/topcoat-desktop-light.min.css"/>
+    <!-- Topcoat overrides (Font, etc) -->
+    <link id="topcoat-host" rel="stylesheet" href="css/topcoat-host.css"/>
+    <!-- Actual Panel styling -->
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <script src="js/lib/jquery-1.9.1.min.js"></script>
+    <script src="js/lib/vue.js"></script>
+    <script src="js/lib/json2.js"></script>
+
+    <script type="text/javascript">window.module = undefined</script>
+
+
+</head>
+<body>
+    <script src="js/lib/CSInterface-7.0.0.js"></script>
+    <script src="js/themeManager.js"></script>
+    <script src="js/me.revenga.cclibrarymigration.js"></script>
+
+
+    <div id="app">
+        <div v-show="currentState == StateType.LOADING" id="tpl-state-loading">
+            <p>Loading...</p>
+        </div>
+        <div v-show="currentState == StateType.NONE" id="tpl-state-none">
+            <h2>Nothing opened...</h2>
+            <p>Open a document first.</p>
+        </div>
+        <div v-show="currentState == StateType.READY" id="tpl-state-ready">
+            <button v-on:click="doReplace">Replace!</button>
+        </div>
+    </div>
+
+</body>
+</html>
